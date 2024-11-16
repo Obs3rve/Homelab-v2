@@ -1,25 +1,66 @@
-# Homelab-v2
+# **Homelab-v2**
 
 This repository documents my hands-on journey in mastering SRE and DevOps skills by rebuilding my Homelab. It starts with managing infrastructure on Raspberry Pis and evolves to deploying scalable, cloud-native solutions on Azure.
 
-## Phases of the Journey
-1. **[Phase 1: Setup and Preparation](docs/phase-1-setup.md)**
-2. **[Phase 2: Infrastructure as Code](docs/phase-2-infra-as-code.md)**
-3. **[Phase 3: Configuration Management](docs/phase-3-configuration-management.md)**
-4. **[Phase 4: Containerization and Orchestration](docs/phase-4-containerization-and-orchestration.md)**
-5. **Phase 5: CI/CD Pipelines**
-6. **Phase 6: Monitoring and Logging**
-7. **Phase 7: Chaos Engineering**
-8. **Phase 8: Backup and Disaster Recovery**
-9. **[Phase 9: Migration to Azure](docs/phase-9-migration-to-azure.md)**
+---
 
-## Tools and Technologies
-- **Infrastructure as Code**: Terraform
-- **Configuration Management**: Ansible
-- **Orchestration**: Kubernetes (k3s and AKS)
-- **Monitoring**: Prometheus, Grafana, ELK Stack
-- **Cloud**: Azure
+## **Phases of the Journey**
+This project is divided into multiple phases, each focusing on a key aspect of SRE and DevOps:
 
+1. **[Phase 1: Setup and Preparation](docs/phase-1-setup.md)**  
+   Setting up the foundational environment with Raspberry Pis.
+2. **[Phase 2: Infrastructure as Code](docs/phase-2-infra-as-code.md)**  
+   Automating infrastructure provisioning with Terraform.
+3. **[Phase 3: Configuration Management](docs/phase-3-configuration-management.md)**  
+   Managing and automating system configurations with Ansible.
+4. **[Phase 4: Containerization and Orchestration](docs/phase-4-containerization-and-orchestration.md)**  
+   Deploying and managing containers with Docker and Kubernetes (k3s).
+5. **[Phase 5: CI/CD Pipelines](docs/phase-5.md)**  
+   Building pipelines to automate application deployment.
+6. **[Phase 6: Monitoring and Logging](docs/phase-6.md)**  
+   Implementing monitoring (Prometheus, Grafana) and centralized logging (ELK Stack).
+7. **[Phase 7: Chaos Engineering](docs/phase-7.md)**  
+   Testing system resilience using tools like Chaos Mesh and LitmusChaos.
+8. **[Phase 8: Backup and Disaster Recovery](docs/phase-8.md)**  
+   Setting up automated backups and recovery solutions.
+9. **[Phase 9: Migration to Azure](docs/phase-9-migration-to-azure.md)**  
+   Migrating the Homelab setup to Azure for scalability.
+
+---
+
+## **Tools and Technologies**
+This project leverages a variety of industry-standard tools and technologies:
+
+### **Infrastructure Management**
+- **Terraform**: Infrastructure as Code (IaC) for provisioning resources.
+- **Ansible**: Configuration management and automation.
+
+### **Containerization and Orchestration**
+- **Docker**: Containerization.
+- **Kubernetes**: Lightweight k3s for on-premises and AKS for cloud orchestration.
+
+### **Monitoring and Logging**
+- **Prometheus & Grafana**: System monitoring and visualization.
+- **ELK Stack (Elasticsearch, Logstash, Kibana)**: Centralized logging.
+
+### **Cloud Platform**
+- **Azure**: Hosting cloud-native solutions.
+
+### **CI/CD Tools**
+- **Jenkins**, **GitHub Actions**: Pipeline automation.
+
+### **Chaos Engineering**
+- **Chaos Mesh**, **LitmusChaos**: Simulating failures to improve resilience.
+
+### **Backup Solutions**
+- Custom scripts and Azure Backup for disaster recovery.
+
+---
+
+## **Repository Structure**
+The repository is structured to organize code, configurations, and documentation logically:
+
+```
 Homelab-v2/
 │
 ├── terraform/             # Terraform configurations for infrastructure
@@ -36,18 +77,39 @@ Homelab-v2/
 │   ├── phase-2-infra-as-code.md
 │   ├── phase-3-configuration-management.md
 │   ├── phase-4-containerization-and-orchestration.md
-│   ├── phase-5
-│   ├── phase-6
-│   ├── phase-7
-│   ├── phase-8
-│   └── phase-9
+│   ├── phase-5.md
+│   ├── phase-6.md
+│   ├── phase-7.md
+│   ├── phase-8.md
+│   └── phase-9-migration-to-azure.md
 └── README.md              # Project overview
+```
 
+---
 
-## How to Use This Repository
-- Each phase has its own documentation file under the `docs/` directory.
-- Configurations and scripts are organized by tool (e.g., `terraform/`, `ansible/`).
+## **How to Use This Repository**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/Homelab-v2.git
+   cd Homelab-v2
+   ```
+2. Navigate to the desired phase in the `docs/` directory to view instructions and configurations.
+3. Execute the scripts or configurations under the corresponding tool directory (e.g., `terraform/` for infrastructure setup).
+4. Review progress and additional insights in the documentation.
 
-## Goals
-- Build hands-on expertise in SRE and DevOps.
-- Migrate projects from on-premises (Raspberry Pis) to the cloud (Azure).
+---
+
+## **Goals**
+This project aims to:
+1. Build hands-on expertise in modern SRE and DevOps practices.
+2. Automate infrastructure provisioning, configuration, and deployment.
+3. Create a scalable, resilient system both on-premises and in the cloud.
+4. Transition on-premises workloads (Raspberry Pis) to a cloud-native architecture (Azure).
+
+---
+
+## **Next Steps**
+- For detailed instructions, check the documentation under the `docs/` directory.
+- Stay tuned for updates as the journey progresses!
+
+ ---
