@@ -1,9 +1,8 @@
-raspberry_pi_ips = ["192.168.1.3", "192.168.1.4"]  # Replace with your Pi's IPs
+# terraform.tfvars
 
-
-# SSH Usernames (one for each Raspberry Pi)
-ssh_users = ["pi1", "pi2"]  # Replace with actual usernames for each Pi
-
-
-# Path to your private SSH key
-ssh_private_key = "~/.ssh/id_rsa"  # Replace with your SSH key path
+pi1_ip            = "192.168.1.3"
+pi2_ip            = "192.168.1.4"
+pi1_user          = "pi1"      # SSH username for Pi1
+pi2_user          = "pi2"      # SSH username for Pi2
+ssh_private_key_path = "~/.ssh/id_rsa"  # path to your private SSH key
+k3s_token          = "your-k3s-token"  # k3s token from master node

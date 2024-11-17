@@ -1,30 +1,38 @@
+# main.tf
+
 provider "null" {
-  version = "~> 3.0"
+  # You don't need to specify version here as it's deprecated. Remove this line:
+  # version = "~> 3.1"
 }
 
-resource "null_resource" "raspberry_pi_setup" {
-  count = length(var.raspberry_pi_ips)
+resource "null_resource" "install_docker_pi1" {
+  connection {
+    type        = "ssh"
+    host        = var.pi1_ip
+    user        = var.pi1_user
+    private_key = file(var.ssh_private_key_path)
+  }
 
-  # This block will execute a command on each Raspberry Pi.
   provisioner "remote-exec" {
     inline = [
-      "echo 'Setting up Raspberry Pi ${count.index + 1}'",
-      "sudo apt-get update -y",
-      "sudo apt-get install -y docker.io"
+      "sudo apt update",
+      "sudo apt install -y docker.io"
     ]
-
-    connection {
-      type        = "ssh"
-      host        = var.raspberry_pi_ips[count.index]
-      user        = var.ssh_users[count.index]
-      private_key = file(var.ssh_private_key)
-    }
   }
 }
-output "raspberry_pi_ips" {
-  value = var.raspberry_pi_ips
-}
 
-output "ssh_users" {
-  value = var.ssh_users
+resource "null_resource" "install_docker_pi2" {
+  connection {
+    type        = "ssh"
+    host        = var.pi2_ip
+    user        = var.pi2_user
+    private_key = file(var.ssh_private_key_path)
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo apt update",
+      "sudo apt install -y docker.io"
+    ]
+  }
 }
