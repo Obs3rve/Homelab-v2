@@ -90,7 +90,7 @@ Homelab-v2/
 ## **How to Use This Repository**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Homelab-v2.git
+   git clone https://github.com/Obs3rve/Homelab-v2.git
    cd Homelab-v2
    ```
 2. Navigate to the desired phase in the `docs/` directory to view instructions and configurations.
